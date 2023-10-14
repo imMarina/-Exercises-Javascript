@@ -64,6 +64,20 @@ for (let i = 0; i < 10; i++) {
 1 1 1 1 1 0 0 0 0 0
 */
 
+// 3 
+for (let i = 0; i < 10; i++) {
+	let str = ''
+	
+	for (let k = 0; k < 10; k++) {
+		  if ((k < 5 && i < 5) || (k > 4 && i > 4)) {
+				str = str + "1";
+	    } else {
+		    str = str + "0";
+	    }
+	  }
+	console.log(str);
+}
+
 
 
 // Задание 8
@@ -106,5 +120,4 @@ for(let i=0;i<n;++i){
   matrix+=`<div>${row}</div>`;
 }
   res.innerHTML+=matrix;
-</script>
 
