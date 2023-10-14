@@ -3,7 +3,7 @@
 for (let i = 0; i < 5; i++) {
 	let str = ''
         for (let k = 0; k < 5; k++) {
-            str = str + i + '/' + k + ' ';
+            str += `${i}/${k} `;
         }
 	console.log(str);
 }
