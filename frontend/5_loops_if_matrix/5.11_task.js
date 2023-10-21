@@ -20,38 +20,42 @@ for (let i = 0; i < n; i++) {
     let str = "";
     
     for (let j = 0; j < n; j++) {
+
         if (i < j && (i+j) < flag) {
         str += "1 ";
         } 
         else if (i > j && (i+j) > flag) {
         str += "3 ";
         } 
-        else if (i > j && ((i+j) > n - flag)) {
+        else if (i > j && (i < flag - j)) {
         str += "4 ";
         } 
-
+        else if ((i === j) || (j === flag - i)) {
+        str = str + '0 ';
+        }
         else {
-        str += "0 ";
+        str += "2 ";
         }
     }
-    // flag--;
     console.log(str);
 }
 
 /*
 0 1 1 1 1 1 1 1 1 0 
-0 0 1 1 1 1 1 1 0 0 
-4 4 0 1 1 1 1 0 0 0 
-4 4 4 0 1 1 0 0 0 0 
-4 4 4 4 0 0 0 0 0 0 
-4 4 4 4 4 0 0 0 0 0 
-4 4 4 4 3 3 0 0 0 0 
-4 4 4 3 3 3 3 0 0 0 
-4 4 3 3 3 3 3 3 0 0 
-4 3 3 3 3 3 3 3 3 0 
+4 0 1 1 1 1 1 1 0 2 
+4 4 0 1 1 1 1 0 2 2 
+4 4 4 0 1 1 0 2 2 2 
+4 4 4 4 0 0 2 2 2 2 
+4 4 4 4 0 0 2 2 2 2 
+4 4 4 0 3 3 0 2 2 2 
+4 4 0 3 3 3 3 0 2 2 
+4 0 3 3 3 3 3 3 0 2 
+0 3 3 3 3 3 3 3 3 0 
 */
 
-<script>
+
+// by Evgeniya (frontend2)
+
 let n = 10;
 
 for (let i = 0; i < n; i++){
@@ -72,4 +76,3 @@ for (let i = 0; i < n; i++){
     }
     console.log(str);
 } 
-</script>
