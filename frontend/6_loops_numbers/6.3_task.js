@@ -13,13 +13,12 @@ x = 10
 */
 
 let x = 10
-
 let fibonacci = 0;
 let prev1 = 1;
 let prev2 = 1;
 
 let item = 1;
-console.log(`${item}. ${previous} - нечётное`);
+console.log(`${item}. ${prev1} - нечётное`);
 
 while (prev2 < x) {
     
@@ -44,7 +43,7 @@ while (prev2 < x) {
 6. 8 - чётное
 */
 
-// 2 exmp (poryadkovyj nomer dorabotat')
+// 2 exmp 
 
 let x = 10
 
@@ -52,27 +51,27 @@ let fibonacci = 0;
 let prev1 = 1;
 let prev2 = 1;
 
-let item = 1;
+let item = 0;
 
-while (prev2 < x) {
-    fibonacci = prev1 + prev2;
-    prev1 = prev2;
-    prev2 = fibonacci;
+while (fibonacci < x) {
     
-    item++;
-
-    if (prev1 < 2 || prev2 < 2) {
+    item+=1;
+    
+    if (item <= 2) {
         console.log(`${item}. ${prev1} - нечётное`)
-        console.log(`${item}. ${prev1} - нечётное`)
-    } 
-    if (prev2 % 2 === 0) {
-        console.log(`${item}. ${prev2} - чётное`);
-    } 
-    if (prev2 % 2 !== 0) {
-        console.log(`${item}. ${prev2} - нечётное`);
+    } else {
+        fibonacci = prev1 + prev2;
+        prev1 = prev2;
+        prev2 = fibonacci;
+        
+        if (fibonacci < x) {
+            if (fibonacci % 2 === 0) {
+                console.log(`${item}. ${fibonacci} - чётное`);
+            } else if (fibonacci % 2 !== 0) {
+                console.log(`${item}. ${fibonacci} - нечётное`);
+            }
+        }
     }
-
-    
 }
 
 /*
@@ -84,4 +83,3 @@ while (prev2 < x) {
 4. 8 - чётное
 5. 13 - нечётное
 */
-

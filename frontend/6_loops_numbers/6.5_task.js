@@ -26,7 +26,6 @@ while (numberX >= 1) {
     console.log(out);
 }
 
-console.log(`Digit = ${digit}`);
 
 /*
 1 цифра равна 9
@@ -37,8 +36,19 @@ console.log(`Digit = ${digit}`);
 Digit = 5
 */
 
-/*
-x = 1;
-1 цифра равна 1
-Digit = 1
-*/
+
+// 2 exmp
+let numberX = 10819;
+let divider = 10;
+
+let digit = 0;
+
+while (numberX >= 1) {
+    digit++;
+
+    let num = numberX % divider;
+    let out = `${digit} цифра равна ${num}`;
+
+    numberX = Math.floor(numberX / divider);
+    console.log(out);
+}
