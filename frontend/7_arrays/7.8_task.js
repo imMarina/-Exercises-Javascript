@@ -1,22 +1,16 @@
 // Задание 7.8
 // Дан массив `a`. Поменяйте местами его минимальный и максимальный элементы и выведете на экран.
 
-let h = [7, 2, 3, 0];
+let arr = [7, 2, 3, 0]; // [0,2,3,7]
 
-console.log(h.sort((a, b) => a - b)); // [0,2,3,7]
-
-/* extra info 
-let a = [7, 2, 3, 0];
-console.log(a.includes(2)); // выведет true
-console.log(a.includes(-1)); // выведет false
-console.log(a.indexOf(3)); // выведет 2 - индекс элемента со значением 3
-console.log(a.indexOf(10)); // выведет -1 так как такого элемента нет в массиве
-
-if (a.includes(2)) {
-  // выполнится только если в массиве a есть 2
+for (let i = 0; i <= arr.length; i++) {
+    for (let j = 0; j <= arr.length - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let max = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = max;
+    }
+  }
 }
 
-if (!a.includes(-1)) {
-  // выполнится только если в массиве a нет -1
-}
-*/
+console.log(arr); // [ 0, 2, 3, 7 ]

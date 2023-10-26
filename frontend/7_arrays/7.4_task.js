@@ -4,11 +4,13 @@
 // Неотрицательные из них: 5, 2
 
 
-let c = [-2, 10, 5, 1, 2, 6];
-let sum2 = 0;
-for (let i = 0; i < c.length; i = i + 2) {
-    if (c[i] > 0){
-        sum2 += c[i];
+let arr = [-2, 10, 5, 1, 2, 6];
+let sum = 0;
+
+for (let i = 0; i < arr.length; i = i + 2) {
+    if (arr[i] > 0) {
+        console.log(arr[i]); // 5, 2
+        sum += arr[i];
     }
 }
-console.log(sum2); // sum = 6
+console.log(`Total is ${sum}`); // Total is 7
