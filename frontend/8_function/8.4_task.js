@@ -5,7 +5,7 @@ function iWantToSleep(counter) {
     let text = 'sheep...'
     let result = '';
     
-    for (let i=1; i <= counter; i++) {
+    for (let i = 1; i <= counter; i++) {
         result += `${i} ${text}`
     }
     return result;
