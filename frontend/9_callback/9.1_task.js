@@ -12,9 +12,9 @@
 
 function forEach(array, callback) {
 	for (let i = 0; i < array.length; i++) {
-		let item = array[i];
+		let elem = array[i];
 	    let index = i;
-		callback(item, index);
+		callback(elem, index);
 	}
 }
 
@@ -40,9 +40,9 @@ forEach(firstArray, showArray);
 
 function forEach(array, callback) {
 	for(let i = 0; i < array.length; i++) {
-	    let item = array[i];
+	    let elem = array[i];
 	    let index = i;
-		callback(item, index);
+		callback(elem, index);
 	}
 }
 

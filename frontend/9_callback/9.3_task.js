@@ -5,27 +5,35 @@
 /* Напишите функцию `map`,  которая принимает первым параметром массив, вторым - callback-функцию. Функция `map` должна создавать новый массив и возвращать его. сallback-функцию должна применяться к каждому элементу исходного массива и принимает два параметра: сам элемент и индекс, а также возвращать элемент нового массива (`const newElem = callback(array[index], index)`). Созданный новый элемент должен записываться в новый массив.
 - Передайте в созданную функцию `map` числовой массив, а в качестве callback-функции - функцию, которая будет высчитывать квадрат каждого элемента и возвращать его. Callback-функцию можно создавать стрелочным способом. */
 
-const arr = [2, 3, 4, 5];
-// const newArr = map(arr, myCallbackFunc);
-// console.log(newArray); // [4, 9, 16, 25];
 
-function map(array, myCallbackFunc) {
+function map(array, callback) {
     let newArray = [];
-	for (let i = 0; i < array.length; i++) {
-        const newElem = myCallbackFunc(array[i])
+
+	for (let index = 0; index < array.length; index++) {
+        let elem = array[index];
+        const newElem = callback(elem, index) // mozhno peredavat stolko elem skolko potrebuetsya, t e mozhno peredat v dannom sluhae tolko odin elem, a index ne peredavat
         newArray.push(newElem);
 	}
+
     return newArray;
 }
 
-map(arr, function(elem) {
+function myCallback(elem) {
     let result = elem ** 2;
-    console.log(result);
+    return result;
+}
+
+const arr = [2, 3, 4, 5];
+const newArr = map(arr, myCallback);
+console.log(newArr); // [4, 9, 16, 25];
+
+
+// вариант с анонимной callback-функцией
+const newArr = map(arr, function(elem) {
+   return elem ** 2;
 });
 
 
-// стрелочный способ
-map(arr, elem => {
-    let result = elem ** 2;
-    console.log(result);
-});
+//  Callback-функция стрелочным способом
+const newArr = map(arr, elem => elem ** 2);
+
