@@ -4,10 +4,25 @@ let arr = [5, 2, -1, 9];
 
 let min = arr[0];
 let max = min;
-  for (i = 1; i < arr.length; i++) {
-      if (arr[i] > max) max = arr[i];
-      if (arr[i] < min) min = arr[i];
+
+/* with infinity 
+let max = -Infinity;
+let min = Infinity;
+*/
+
+  for (let i = 1; i < arr.length; i++) {
+
+      if (arr[i] > max) {
+        max = arr[i];
+      } else if (arr[i] < min) {
+        min = arr[i];
+      }
+
+      // if (arr[i] > max) max = arr[i];
+      // if (arr[i] < min) min = arr[i];
   }
+      
+
   
 console.log(min); // min = -1
 console.log(max); // max = 9

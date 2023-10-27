@@ -15,19 +15,12 @@ arr.forEach((item) => {
 console.log(arr); // [1,4,10,2,0]
 
 
-// 2 example
+// 2 example with loops
 
 for (let i = 0; i < arr.length; i++) {
         
-        if (arr[i] !== arr[i + 1]) {
-            
-          	let newItem = arr[i];
-          	
-            newArr.push(newItem);
-            
-            arr[i] = arr[i + 1];
-            
-            arr[i + 1] = newItem;
+        if (!newArr.includes(arr[i])) {
+            newArr.push(arr[i]);
         }
     }
 

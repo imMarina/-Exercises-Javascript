@@ -7,10 +7,20 @@
 let arr = [-2, 10, 5, 1, 2, 6];
 let sum = 0;
 
-for (let i = 0; i < arr.length; i = i + 2) {
+for (let i = 0; i < arr.length; i += 2) {
     if (arr[i] > 0) {
         console.log(arr[i]); // 5, 2
         sum += arr[i];
     }
 }
+
+// with index and if
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0 && (i + 1) % 2 !== 0) {
+        console.log(arr[i]); // 5, 2
+        sum += arr[i];
+    }
+}
+
 console.log(`Total is ${sum}`); // Total is 7
