@@ -11,6 +11,7 @@ console.log(newArr); // [ 1, 2, 3, 4, 5, 6 ]
 function unique(array) {
 
     let newArr = [];
+    
     array.forEach((item) => {
         if (!newArr.includes(item)) {
             newArr.push(item);
