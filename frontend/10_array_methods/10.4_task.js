@@ -20,3 +20,16 @@ function unique(array) {
     return newArr;
 }
 
+
+// уникальные значения в массиве с помощью метода from()
+function unique(array) {
+    const uniqueArr = Array.from(new Set(array));
+    return uniqueArr;
+}
+
+// уникальные значения в массиве с помощью оператора spread ("…")
+function unique(array) {
+    const uniqueArr = [...new Set(array)];
+    return uniqueArr;
+}
+
