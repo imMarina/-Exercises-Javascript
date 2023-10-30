@@ -37,15 +37,14 @@ function indexOfArray(twoDimArr, query) {
 
 // by array.findIndex(callback)
 function indexOfArray(twoDimArr, query) {
-    
-    function checkIndex(interArr) {
+
+  let result = twoDimArr.findIndex((interArr) => {
         let interArrString = interArr.join();
         let queryString = query.join();
-    
         return interArrString === queryString;
-    }
-
-    return twoDimArr.findIndex(checkIndex);
+    });
+  
+    return result;
 }
 
 
