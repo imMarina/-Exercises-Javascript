@@ -13,7 +13,7 @@ const query2 = [4, 4, 4];
 const result2 = indexOfArray(twoDimArray, query2);
 console.log(result2); // -1
 
-
+// by array.join()
 function indexOfArray(twoDimArr, query) {
     
     for (let index = 0; index < twoDimArr.length; index++) {
@@ -35,8 +35,21 @@ function indexOfArray(twoDimArr, query) {
 }
 
 
-// need to find a solution by array.indexOf(element) or array.findIndex(callback)
+// by array.findIndex(callback)
+function indexOfArray(twoDimArr, query) {
+    
+    function checkIndex(interArr) {
+        let interArrString = interArr.join();
+        let queryString = query.join();
+    
+        return interArrString === queryString;
+    }
 
+    return twoDimArr.findIndex(checkIndex);
+}
+
+
+// need to find a solution by array.indexOf(element) or array.findIndex(callback)
 function indexOfArray(array, element, from = 0) {
     
     for (let i = from; i < array.length; i++) {
