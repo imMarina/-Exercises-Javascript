@@ -19,3 +19,16 @@ function chunk(mainArr, lengthOfInterArr) {
     }
     return twoDimArr;
 }
+
+
+// draft
+// let separator = lengthOfInterArr + 1;
+    // let mainArrString = mainArr.join().slice(index, separator).split(',');
+    //console.log(mainArrString);
+    // parseInt('string')
+            
+        // index = 2
+        // console.log(mainArr[index], mainArr[index + 1]);
+        // console.log(mainArr[index + 1]);
+
+        //mainArr.length = lengthOfInterArr;
