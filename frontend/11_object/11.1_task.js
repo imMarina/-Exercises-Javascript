@@ -23,10 +23,14 @@ function createNewObjects(title, director) {
         director,
     };
 }
-const movieTitles = ["Зеленая миля", "Побег из Шоушенка", "Форрест Гамп", "1+1", "Список Шиндлера"];
-const movieDirectors = ["Фрэнк Дарабонт", "Фрэнк Дарабонт","Роберт Земекис", "Оливье Накаш", "Стивен Спилберг"];
 
-for (let i = 0; i < movieTitles.length; i++) {
-    let result = createNewObjects(movieTitles[i], movieDirectors[i])
-    console.log(result);
+function makeList(arr1, arr2) {
+    let newArr = [];
+    for (let i = 0; i < arr1.length; i++) {
+        let result = createNewObjects(arr1[i], arr2[i]);
+        newArr.push(result);
+    }
+    return newArr;
 }
+
+console.log(makeList(movieTitles, movieDirectors));
