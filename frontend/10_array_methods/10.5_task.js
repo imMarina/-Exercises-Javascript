@@ -19,17 +19,11 @@ function indexOfArray(twoDimArr, query) {
     for (let index = 0; index < twoDimArr.length; index++) {
         
         let twoDimArrString = twoDimArr[index].join();
-        // console.log(twoDimArrString);
         let queryString = query.join();
-        // console.log(queryString);
         
         if (twoDimArrString === queryString) {
                 return index;
             } 
-        
-        // console.log(index);
-        // console.log(twoDimArr[index]);
-        // console.log(query);
     }
     return -1;
 }
@@ -48,14 +42,18 @@ function indexOfArray(twoDimArr, query) {
 }
 
 
-// need to find a solution by array.indexOf(element) or array.findIndex(callback)
-function indexOfArray(array, element, from = 0) {
+// by callback function() (updated solution with Sasha) 
+function indexOfArray(twoDimArr, query) {
+
+    // task 10.2 compare arrays
+    let isEqual= (firstArr, secondArr) =>
+    (firstArr.length === secondArr.length) && firstArr.every((element,index) => element === secondArr[index]);
     
-    for (let i = from; i < array.length; i++) {
-        if (array[i] === element) {
-            return i;
+    for (let index = 0; index < twoDimArr.length; index++) {
+        if (isEqual(twoDimArr[index], query)) {
+                return index;
         } 
+        
     }
     return -1;
-    // return array.indexOf(element);
 }

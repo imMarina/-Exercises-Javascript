@@ -33,3 +33,8 @@ function unique(array) {
     return uniqueArr;
 }
 
+
+// by indexOf() (updated solution with Sasha) 
+function unique(array) {
+	return array.filter((elem, index, arr) => arr.indexOf(elem) === index);
+}

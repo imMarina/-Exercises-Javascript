@@ -39,3 +39,25 @@ function arrayDiff(firstArr, secondArr) {
 
 console.log(arr); // [ 1, 2 ]
 console.log(arr2); // [ 1, 2, 4, 3 ]
+
+
+// by filter() (updated solution with Sasha) 
+function arrayDiff(firstArr, secondArr) {
+    let newArr = firstArr.filter((item) => {
+        if (!secondArr.includes(item)) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    return newArr;
+}
+
+// code refactoring
+function arrayDiff(firstArr, secondArr) {
+    let newArr = firstArr.filter((item) => !secondArr.includes(item));
+    return newArr;
+}
+
+console.log(arr); // [2]
+console.log(arr2); // [1, 3]

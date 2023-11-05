@@ -7,6 +7,5 @@ console.log(isEqual(arr1, arr2)); // true
 
 
 function isEqual(firstArr, secondArr) {
-    
-    return firstArr.every((element,index) => element === secondArr[index]) && firstArr.length === secondArr.length;
+    return firstArr.length === secondArr.length && firstArr.every((element,index) => element === secondArr[index]);
 }
