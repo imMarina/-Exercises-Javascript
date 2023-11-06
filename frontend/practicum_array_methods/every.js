@@ -1,4 +1,6 @@
 // method EVERY
+// Array.prototype.every()
+
 // Метод every() проверяет, все ли элементы массива проходят заданную тестовую функцию.
 arr.every(callback(currentValue), thisArg);  Где arr - это массив.
 // thisArg (необязательно) - значение, используемое в качестве this, при вызове функции callback. По умолчанию определен как undefined.
