@@ -7,7 +7,7 @@
 // Если элемента нет, то в результат возвращается undefined.
 
 
-// Syntax findLast()
+// Syntax findLast() by mozilla docs
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
 
