@@ -54,3 +54,28 @@ let check1 = languages.includes("Java", 2); // false
 
 // поиск начинается с третьего последнего элемента
 let check2 = languages.includes("Java", -3); // true
+
+
+// example 4 Массив:
+
+const dead = ['Джон Сноу', 'Джофри', 'Нед Старк', 'Король ночи']
+const isAryaDead = dead.includes('Арья Старк')
+console.log(isAryaDead) // false
+
+const isJoffreyDead = dead.includes('Джофри')
+console.log(isJoffreyDead) // true
+
+const isJohnDead = dead.includes('Джон Сноу', 1)
+console.log(isJohnDead) // false
+
+
+// example 5 Строка:
+
+const text = 'Посмотри, ведь это рядом наша панда. Мы бежим с тобой как-будто от гепарда.';
+
+console.log(text.includes('панда')) // true
+
+console.log(text.includes('Обезьяна')) // false
+
+// поиск идет с учетом регистра
+console.log(text.includes('Панда')) // false
