@@ -46,3 +46,11 @@ const newArr = map(arr, function(elem) {
 const newArr = map(arr, elem => elem === 1 ? 0 : 1);
 console.log(newArr); // [0, 0, 1, 1, 0, 1, 0];
 
+
+// by method map array
+// 1 example
+const newArr = arr.map(elem => elem === 1 ? 0 : 1);
+console.log(newArr);
+
+// 2 example
+console.log([1, 1, 0, 1, 0, 0, 0, 1].map(e => e === 1 ? 0 : 1))
