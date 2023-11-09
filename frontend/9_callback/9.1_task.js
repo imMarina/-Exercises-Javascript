@@ -68,3 +68,10 @@ forEach(arr, (elem, index) => {
 // "Элемент 1 с индексом 0"
 // "Элемент 2 с индексом 1"
 // "Элемент 3 с индексом 2"
+
+
+// method forEach array
+arr.forEach((elem, index) => {
+    const text = `Элемент ${elem} с индексом ${index}`;
+    console.log(text);
+});
