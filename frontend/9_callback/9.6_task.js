@@ -38,3 +38,7 @@ console.log(newArr2); // [];
 const newArr1 = filter(arr1, (elem, index) => (typeof elem === 'string') ? true : false);
 
 const newArr2 = filter(arr2, (elem, index) => (typeof elem === 'string') ? true : false);
+
+// by method filter array
+const newArr1 = arr1.filter(elem => typeof elem === 'string');
+const newArr2 = arr2.filter(elem => typeof elem === 'string');
