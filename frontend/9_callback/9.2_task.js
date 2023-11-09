@@ -34,7 +34,7 @@ forEach(arr, function(elem, index) {
 forEach(arr, (elem, index) => {
     let sum = elem + index;
     let resultCallback = `${elem} + ${index} = ${sum}`;
-    return resultCallback;
+    console.log(resultCallback);
 });
 
 // "1 + 0 = 1"
@@ -42,3 +42,11 @@ forEach(arr, (elem, index) => {
 // "3 + 2 = 5"
 // "4 + 3 = 7"
 // "5 + 4 = 9"
+
+
+//   method forEach
+arr.forEach((elem, index) => {
+    let sum = elem + index;
+    let resultCallback = `${elem} + ${index} = ${sum}`;
+    console.log(resultCallback);
+});
