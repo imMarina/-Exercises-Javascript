@@ -45,3 +45,11 @@ console.log(newArr1); // [2, 42, 8];
 
 const newArr2 = filter(arr2, (elem, index) => (elem % 2 === 0) ? true : false);
 console.log(newArr2); // [];
+
+
+// by method filter array
+const newArr1 = arr1.filter(elem => elem % 2 === 0);
+console.log(newArr1); // [2, 42, 8];
+
+const newArr2 = arr2.filter(elem => elem % 2 === 0);
+console.log(newArr2); // [];
