@@ -37,3 +37,7 @@ const newArr = map(arr, function(elem) {
 //  Callback-функция стрелочным способом
 const newArr = map(arr, elem => elem ** 2);
 
+
+// by method map array
+const newArr = arr.map(elem => elem ** 2);
+console.log(newArr);
