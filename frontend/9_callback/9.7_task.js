@@ -40,3 +40,30 @@ console.log(elem2); // undefined
 //  Callback-функция стрелочным способом
 const elem1 = find(arr1, (elem, index) => (elem === "apple") ? true : false);
 const elem2 = find(arr2, (elem, index) => (elem === "apple") ? true : false);
+
+
+// by method find array
+const elem1 = arr1.find(elem => elem === "apple");
+const elem2 = arr2.find(elem => elem === "apple");
+console.log(elem1); // "apple"
+console.log(elem2); // undefined
+
+
+  // by method find array of objects
+const arr1 = [
+    {id: 1, f: "apricot"},
+    {id: 2, f: "banana"},
+    {id: 3, f:"kiwi"},
+    {id: 4, f:"lime"},
+    {id: 5, f:"apple"}, 
+    {id: 6, f:"mango"},
+    {id: 7, f:"apple"},
+];
+
+const elem1 = arr1.find(elem => elem.f === "apple");
+console.log(elem1); // { id: 5, f: 'apple' }
+
+
+// by method findLast
+const elem2 = arr1.findLast(elem => elem.f === "apple");
+console.log(elem2); // { id: 7, f: 'apple' }
