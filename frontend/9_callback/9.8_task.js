@@ -34,3 +34,10 @@ console.log(elem2); // undefined
 const elem1 = find(arr1, (elem, index) => (elem % 5 === 3) ? true : false);
 
 const elem2 = find(arr2, (elem, index) => (elem % 5 === 3) ? true : false);
+
+
+// by method find array
+const elem1 = arr1.find(elem => elem % 5 === 3);
+const elem2 = arr2.find(elem => elem % 5 === 3);
+console.log(elem1);
+console.log(elem2);
