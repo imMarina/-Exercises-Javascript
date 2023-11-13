@@ -9,13 +9,12 @@ const movieDirectors = ["Фрэнк Дарабонт", "Фрэнк Дарабо�
 
 // output
 [
-	{title: "Зеленая миля", director: "Фрэнк Дарабонт"},
-	{title: "Побег из Шоушенка", director: "Фрэнк Дарабонт"},
-	{title: "Форрест Гамп", director: "Роберт Земекис"},
-	{title: "1+1", director: "Оливье Накаш"},
-	{title: "Список Шиндлера", director: "Стивен Спилберг"},
+    {title: "Зеленая миля", director: "Фрэнк Дарабонт"},
+    {title: "Побег из Шоушенка", director: "Фрэнк Дарабонт"},
+    {title: "Форрест Гамп", director: "Роберт Земекис"},
+    {title: "1+1", director: "Оливье Накаш"},
+    {title: "Список Шиндлера", director: "Стивен Спилберг"},
 ]
-
 
 function createNewObjects(title, director) {
     return {
@@ -34,3 +33,17 @@ function makeList(arr1, arr2) {
 }
 
 console.log(makeList(movieTitles, movieDirectors));
+
+
+// by method map
+
+let newArr = movieTitles.map((elem, index) => {
+    let newElem = {};
+    
+    newElem.title = elem;
+    newElem.director = movieDirectors[index];
+
+    return newElem;
+});
+
+console.log(newArr);
