@@ -18,6 +18,26 @@ const dog = {
 // };
 
 
+function changePosition(obj) {
+    
+    let arrOfProperties = Object.entries(dog); 
+    // console.log(arrOfProperties) // [ [ 'name', 'Рекс' ], [ 'age', 3 ], [ 'home', 'Москва' ] ]
+
+    let newArr = arrOfProperties.map(([key, value]) => [value, key]);
+    // console.log(newArr) // [ [ 'Рекс', 'name' ], [ 3, 'age' ], [ 'Москва', 'home' ] ]
+
+
+    let newObj = Object.fromEntries(newArr);
+    // console.log(newObj); // { '3': 'age', 'Рекс': 'name', 'Москва': 'home' }
+
+    return newObj;
+}
+
+console.log(changePosition(dog)); // { '3': 'age', 'Рекс': 'name', 'Москва': 'home' }
+
+
+
+// draft
 let keys = Object.keys(dog);
 // console.log(keys);
 
@@ -28,7 +48,6 @@ for (let value of Object.values(dog)) {
     values.push(str);
 }
 // console.log(values);
-
 
 let newObj = {};
 
