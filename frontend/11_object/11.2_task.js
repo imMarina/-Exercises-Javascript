@@ -162,3 +162,22 @@ console.log(result);
 //     car: 'Mercedes'
 //   }
 // ]
+
+
+
+// by method map and creating new object
+function changeNameOfKeys(array) {
+  return array.map(elem => {
+    let newObj = {
+        name: elem.n,
+        age: elem.a,
+        home: elem.h,
+        profession: elem.p,
+        car: elem.c,
+      }
+        return newObj;
+  });
+}
+
+let result = changeNameOfKeys(arrObjects);
+console.log(result);
