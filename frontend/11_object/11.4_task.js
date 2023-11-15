@@ -70,7 +70,6 @@ let posts = [
 // ]
 
 
-
 // example 1
 // the spread operator
 // Простое решение — использовать Оператор спреда чтобы расширить свойства указанных объектов до буквальных объектов (ES2018).
@@ -98,4 +97,46 @@ function mergeInfo(arrObj1, arrObj2) {
 
 console.log(mergeInfo(users, posts));
 
+
+// example 3
+// merge info of objects with unique user id
+// by methods MAP snd FIND and new object 
+function mergeInfo(arrObj1, arrObj2) {
+
+	let newArr = arrObj2.map((post) => {
+	let newObj = {
+		id: post.id,
+		title: post.title,
+		text: post.text,
+		author: arrObj1.find(user => user.id === post.userID).name,
+		};
+	return newObj;
+	});
+
+	return newArr;
+}
+
+console.log(mergeInfo(users, posts));
+
+// correct output
+// [
+// 	{
+// 	  id: 1,
+// 	  title: 'Что не так с онлайн-курсами?',
+// 	  text: 'Привет! Меня зовут Юрий, и сегодня я хочу поговорить об онлайн-курсах программирования.',
+// 	  author: 'Юрий'
+// 	},
+// 	{
+// 	  id: 2,
+// 	  title: 'Что за черт, Javascript',
+// 	  text: 'Этот пост — список забавных и хитрых примеров на JavaScript. Это отличный язык. У него простой синтаксис, большая экосистема и, что гораздо важнее, огромное сообщество.',
+// 	  author: 'Юрий'
+// 	},
+// 	{
+// 	  id: 3,
+// 	  title: 'Работа с часовыми поясами в JavaScript',
+// 	  text: 'Недавно я работал над задачей добавления часовых поясов в JS-библиотеку календаря, которую ведёт моя команда.',
+// 	  author: 'Константин'
+// 	}
+//   ]
 
