@@ -18,14 +18,13 @@ const dog = {
 // };
 
 
+// example 1 by Object.entries()
 function changePosition(obj) {
-    
-    let arrOfProperties = Object.entries(dog); 
+    let arrOfProperties = Object.entries(obj); 
     // console.log(arrOfProperties) // [ [ 'name', 'Рекс' ], [ 'age', 3 ], [ 'home', 'Москва' ] ]
 
     let newArr = arrOfProperties.map(([key, value]) => [value, key]);
     // console.log(newArr) // [ [ 'Рекс', 'name' ], [ 3, 'age' ], [ 'Москва', 'home' ] ]
-
 
     let newObj = Object.fromEntries(newArr);
     // console.log(newObj); // { '3': 'age', 'Рекс': 'name', 'Москва': 'home' }
@@ -58,3 +57,15 @@ for (let i = 0; i < values.length; i++) {
 // 'Рекс': 'name'
 // '3': 'age'
 // 'Москва': 'home'
+
+
+// example 2 by Object.keys()
+function changePosition(mainObj) {
+    let newObj = {};
+    Object.entries(mainObj).forEach(([key, value]) => {
+        newObj[value] = key;
+    });
+    return newObj;
+}
+
+console.log(changePosition(dog)); // { '3': 'age', 'Рекс': 'name', 'Москва': 'home' 
