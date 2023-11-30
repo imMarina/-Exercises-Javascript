@@ -5,8 +5,9 @@
 const arr = [1, "Alex", 6, "apple", "1", 12];
 
 arr.forEach((elem) => {
-    let type = typeof elem;
-    console.log(`Элемент: ${elem}, тип: ${type}`);
+    console.log(`Элемент: ${elem}, тип: ${typeof elem}`);
+    // let type = typeof elem;
+    // console.log(`Элемент: ${elem}, тип: ${type}`);
 });
 
 
