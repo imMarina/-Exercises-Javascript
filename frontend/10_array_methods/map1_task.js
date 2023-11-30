@@ -4,6 +4,7 @@
 const arr = [1, 6, 12, 45, 23, 56];
 
 const newArr = arr.map((elem) => String(elem));
+// const newArr = arr.map((elem) => elem.toString());
 console.log(newArr);
 
 //output
