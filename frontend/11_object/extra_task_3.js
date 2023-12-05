@@ -22,3 +22,17 @@ const without = (object, ...args) => {
 
 const data = { a: 1, b: 2, c: 3 };
 console.log(without(data, 'b', 'c')); // { a: 1, b: undefined, c: undefined }
+
+
+// task's solution by author
+const without2 = (object, ...args) => {
+  const newObject = { ...object };
+
+  args.forEach((arg) => {
+    delete newObject[arg];
+  });
+
+  return newObject;
+};
+
+console.log(without2(data, 'b', 'c')); // { a: 1 }
