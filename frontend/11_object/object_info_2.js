@@ -411,7 +411,7 @@ alert( bag.apple ); // 5, если fruit="apple"
 // В JavaScript конструктор — это функция, которая создает объекты, давая им набор заранее определенных свойств и методов.
 // Конструкторы называют с заглавной буквы, чтобы отличать их от обычных функций
 
-
+// example 13
 class Animal {
     constructor(color, type) {
         this.color = color;
@@ -429,3 +429,26 @@ console.log(animal1); // Animal { color: 'white', type: 'dog' }
 console.log(animal2); // Animal { color: 'black', type: 'cat' }
 animal1.showInfo(); // This is dog
 animal2.showInfo(); // This is cat
+
+
+// example 14 - Сумма свойств объекта
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+}
+
+function sumSalaries(obj) {
+    let array = Object.values(salaries); // [ 100, 160, 130 ]
+
+    let initialValue = 0;
+    let result = array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+    return result;
+}
+
+// let sum = 0;
+// for (let key in salaries) {
+//      sum += salaries[key];
+// }
+
+console.log(sumSalaries(salaries)); // 390
