@@ -59,3 +59,25 @@ console.log(createNewObj(devices, cameras));
 //         } 
 //     ]
 // }
+
+
+function createNewObj(obj, arr) {
+
+    let newObj = {
+        ...obj, // operator spread 
+        
+        cameras: obj.cameraIDs.map(camID => {
+            let newCameraObj = {
+                id: camID,
+                name: arr.find(camera => camera.id === camID)?.name || '',
+            }
+            return newCameraObj;
+        }),
+        
+    cameraIDs: undefined, // erase property of object
+    
+    }
+    return newObj;
+}
+
+console.log(createNewObj(devices, cameras));
